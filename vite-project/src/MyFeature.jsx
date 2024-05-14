@@ -67,4 +67,36 @@ function MyFeature() {
             return articles
         })
     },[])
+
+    return (
+        <section>
+            <header>
+                <h1>Artkuły</h1>
+                <input placeholder='tytuł' value={title} 
+                onChange={onChangeTitle}/>
+                <input placeholder='Summary' value={summary}
+                onChange={onChangeSummary}/>
+                <button onClick={onClickAdd}>DODAJ</button>
+            </header>
+            <article>
+                <ul>
+                    {articles.map((i) => (
+                        <li key={i.id.value}>
+                            <a href={`#${i.id}`}
+                            onClick={() => onClickToggle(i.id)}>
+                             {i.title}
+                            </a>☑️
+                            <button href={`#${i.id}`}
+                            onClick={() => onClickRemove(i.id)}>
+                            🔴
+                            </button>
+                            <p style={{ display: i.display}}>{i.summary}
+                            </p>
+                        </li>
+                    ))}
+                </ul>
+            </article>
+        </section>
+    )
 }
+export default MyFeature
