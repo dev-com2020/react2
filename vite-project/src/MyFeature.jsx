@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { useCallback } from 'react'
 
+// https://github.com/dev-com2020/react2
+
 const id = (function* () {
     let i = 1
     while (true) {
@@ -46,4 +48,23 @@ function MyFeature() {
         setTitle('')
         setSummary('')
     },[summary,title])
+
+    const onClickRemove = useCallback((id) => {
+        setArticles((state) => state.filter((article) => 
+        article.id !== id))
+    },[])
+
+    const onClickToggle = useCallback((id) => {
+        setArticles((state) => {
+            const articles = [...state]
+            const index = articles.findIndex((article) => 
+            article.id === id)
+
+            articles[index] = {
+                ...articles[index],
+                display: articles[index].display ? '': "none"
+            }
+            return articles
+        })
+    },[])
 }
