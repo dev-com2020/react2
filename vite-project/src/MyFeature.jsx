@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { useCallback } from 'react'
+import { Outlet } from 'react-router-dom'
 
 // https://github.com/dev-com2020/react2
 
@@ -70,6 +71,9 @@ function MyFeature() {
 
     return (
         <section>
+            <div>
+                <Outlet/>
+            </div>
             <header>
                 <h1>Artkuły</h1>
                 <input placeholder='tytuł' value={title} 

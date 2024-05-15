@@ -4,6 +4,8 @@ import {RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './index.css'
 import MyComponent from './MyComponent'
 import MyFeature from './MyFeature'
+import First from './First'
+import Second from './Second'
 
 const router = createBrowserRouter([
   {path:"/", element: <MyComponent/>},
@@ -11,11 +13,11 @@ const router = createBrowserRouter([
   element: <MyFeature />,
   children: [
     {
-      path: "/first",
+      path: "first",
       element: <First/>
     },
     {
-      path: "/second",
+      path: "second",
       element: <Second/>
     },
   ]
