@@ -6,6 +6,8 @@ import MyComponent from './MyComponent'
 import MyFeature from './MyFeature'
 import First from './First'
 import Second from './Second'
+import routeOne from './one'
+import routeTwo from './two'
 
 const router = createBrowserRouter([
   {path:"/", element: <MyComponent/>},
@@ -20,6 +22,8 @@ const router = createBrowserRouter([
       path: "second",
       element: <Second/>
     },
+    routeOne,
+    routeTwo
   ]
   }
 ])
