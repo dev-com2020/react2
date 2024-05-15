@@ -5,11 +5,21 @@ import './index.css'
 import MyComponent from './MyComponent'
 import MyFeature from './MyFeature'
 
-// https://drive.proton.me/urls/99JEVR17YM#8tlX945Qgyar
-
 const router = createBrowserRouter([
   {path:"/", element: <MyComponent/>},
-  {path:"/blog", element: <MyFeature />}
+  {path:"/blog",
+  element: <MyFeature />,
+  children: [
+    {
+      path: "/first",
+      element: <First/>
+    },
+    {
+      path: "/second",
+      element: <Second/>
+    },
+  ]
+  }
 ])
 
 // npm install react-router-dom
