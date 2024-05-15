@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useCallback } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 
 // https://github.com/dev-com2020/react2
 
@@ -73,6 +73,10 @@ function MyFeature() {
         <section>
             <div>
                 <Outlet/>
+            </div>
+            <div>
+                <Link to="first">Tu link pierwszego...</Link>
+                <Link to="second">Tu link drugiego...</Link>
             </div>
             <header>
                 <h1>Artkuły</h1>
