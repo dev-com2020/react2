@@ -78,10 +78,10 @@ function MyFeature() {
                 <Link to="first">Tu link pierwszego...</Link><br/>
                 <Link to="second">Tu link drugiego...</Link><br/>
             </div>
-            <div>
+            {/* <div>
                 <Link to="/one">katalog ONE</Link><br/>
                 <Link to="/two">katalog TWO</Link><br/>
-            </div>
+            </div> */}
             <header>
                 <h1>Artkuły</h1>
                 <input placeholder='tytuł' value={title} 
